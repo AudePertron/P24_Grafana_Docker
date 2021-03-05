@@ -63,3 +63,32 @@ Les données vaccinales sql sont maintenant disponibles sur Grafana. <br>
 Se rendre sur l'onglet _Dashboard_ ou _Explore_ de la barre de navigation pour générer la dataviz.<br>
 
 ![graph](graph.png)
+
+
+
+<hr>
+### Autres commandes Docker
+
+`docker ps # Visualiser les conteneurs actifs
+docker ps -a # Visualiser tous les conteneurs
+docker rm [container] # Supprimer un conteneur inactif
+docker rm -f [container] # Forcer la suppression d'un conteneur actif
+docker images # Lister les images existantes
+docker rmi [image] # Supprimer une image docker
+docker exec -t -i [container] /bin/bash # Exécuter des commandes dans un conteneur actif
+docker inspect [container] # Inspecter la configuration d'un conteneur
+docker build -t [image] . # Construire une image à partir d'un Dockerfile
+docker history [image] # Visualiser l'ensemble des couches d'une image
+docker logs --tail 5 [container] # Visualiser les logs d'un conteneur (les 5 dernières lignes)`
+
+###### Intéractions avec le registry
+`docker login # Se connecter au registry
+docker search [name] # Rechercher une image
+docker pull [image] # Récupérer une image
+docker push [image] # Pouser une image du cache local au registry
+docker tag [UUID] [image]:[tag] # Tagger une image`
+
+###### Docker-Compose
+`docker-compose up -d # Démarre un ensemble de conteneurs en arrière-plan
+docker-compose down # Stoppe un ensemble de conteneurs
+docker-compose exec [service] [command] # Exécute une commande au sein d'un service`
